@@ -1,0 +1,404 @@
+.navHead{
+    background-color: transparent;
+}
+
+#logo{
+    margin-left: 4px;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.mobNavHead{
+  background-color: rgb(39, 39, 39);
+  width: 100vw;
+  height: 100vh;
+}
+
+#mobNavMain{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+#mobNavItem{
+  color: whitesmoke;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: small;
+}
+
+.mobNavBtnDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.mobNavBtn{
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 30px;
+  white-space: pre-line;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: small;
+  color: white;
+  font-weight: 600;
+}
+
+.toggleMobNav{
+  display: none;
+}
+
+#navToggle{
+  margin: 10px;
+  color: white;
+  font-size: 30px;
+  float: right;
+}
+
+@media (min-width: 1201px) {
+    #navMain{
+      padding: 20px 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    .navMiddle{
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+    }
+
+    #navbarItems{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    #navbarItem{
+      position: relative;
+      color: whitesmoke;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: small;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    #navbarItems * #navbarItem .navCardBtn{
+      transform: rotate(0deg);
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    #navbarItems * :hover > #navbarItem .navCardBtn{
+      transform: rotate(-180deg);
+    }   
+
+    #navbarItems * :hover > .navCard{
+      visibility: visible;
+    }
+
+    #navbarItems li > div{
+      opacity: 1;
+    }
+
+    #navbarItems:hover li > div{
+      opacity: 0.3;
+      transition: 0.3s ease-in-out;
+    } 
+
+    #navbarItems li > div:hover{
+      opacity: 1;
+    }
+    
+    .navBtn{
+      padding: 10px 30px;
+      white-space: nowrap;
+      border: 2px solid white;
+      border-radius: 30px;
+      background: transparent;
+      text-transform: uppercase;
+      font-size: small;
+      color: white;
+      font-weight: 600;
+    }
+
+    .navCard{
+      position: absolute;
+      visibility: hidden;
+      padding: 30px 0;
+    }
+  
+    .locationCard{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      background-color: white;
+      position: relative;
+      border-radius: 7px;
+      box-shadow: 0px 15px 25px rgb(0, 0 ,0 , 15%), 0px 0px 1px rgb(0, 0, 0, 15%);
+    }
+
+    .locationCard .main{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      width: 100%;
+      flex: 1;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .locationCard .upperSide{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgb(163, 158, 158);
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  
+    .locationCard .upperSide > *{
+      flex-basis: 33.333333%;
+      max-width: 33.333333%;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+    
+    .locationCard .upperSide li > *{
+      margin: 5px 0 ;
+    }
+  
+    .locationCard .upperSide > * img{
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+    }
+  
+    .locationCard .upperSide > * a{
+      text-decoration: none;
+      font-size: 12;
+      color: #0066ff;
+    }
+  
+    .locationCard .upperSide > * p{
+      width: 100%;
+      font-size: 12px;
+      font-weight: lighter;
+      color: gray;
+      white-space: wrap;
+    }
+  
+    .locationCard .lowerSide{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      padding: 30px 0 10px 0;
+      list-style-type: none;
+    }
+  
+    .locationCard .lowerSide li > *{
+      text-decoration: underline;
+      color: #0066ff;
+      font-size: 14px;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    
+}
+
+@media (min-width: 993px) and (max-width:1200px){
+
+    #navMain{
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+
+    .navMiddle{
+      width: auto;
+      height: auto!important;
+      flex-grow: 1;
+      z-index: 1;
+      padding: 0 5%;
+    }
+  
+    #navbarItems{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      list-style: none;
+      padding: 0;
+    }
+  
+    #navbarItem{
+      color: whitesmoke;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: small;
+    }
+
+    #navbarItems * > #navbarItem .navCardBtn{
+      transform: rotate(0deg);
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    #navbarItems * :hover > #navbarItem .navCardBtn{
+      transform: rotate(-180deg);
+    }   
+
+    #navbarItems * :hover > .navCard{
+      visibility: visible;
+    }
+    
+    .navBtn{
+      padding: 10px 30px;
+      white-space: nowrap;
+      border: 2px solid white;
+      border-radius: 30px;
+      background: transparent;
+      text-transform: uppercase;
+      font-size: small;
+      color: white;
+      font-weight: 600;
+    }
+
+    .navCard{
+      position: absolute;
+      visibility: hidden;
+      padding: 30px 0;
+    }
+  
+    .locationCard{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      background-color: white;
+      position: relative;
+      border-radius: 7px;
+      box-shadow: 0px 15px 25px rgb(0, 0 ,0 , 15%), 0px 0px 1px rgb(0, 0, 0, 15%);
+    }
+
+    .locationCard .main{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      width: 100%;
+      flex: 1;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .locationCard .upperSide{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgb(163, 158, 158);
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  
+    .locationCard .upperSide > *{
+      flex-basis: 33.333333%;
+      max-width: 33.333333%;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+    
+    .locationCard .upperSide li > *{
+      margin: 5px 0 ;
+    }
+  
+    .locationCard .upperSide > * img{
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+    }
+  
+    .locationCard .upperSide > * a{
+      text-decoration: none;
+      font-size: 12;
+      color: #0066ff;
+    }
+  
+    .locationCard .upperSide > * p{
+      width: 100%;
+      font-size: 12px;
+      font-weight: lighter;
+      color: gray;
+      white-space: wrap;
+    }
+  
+    .locationCard .lowerSide{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      padding: 30px 0 10px 0;
+      list-style-type: none;
+    }
+  
+    .locationCard .lowerSide li > *{
+      text-decoration: underline;
+      color: #0066ff;
+      font-size: 14px;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 992px){
+    .toggleMobNav{
+      display: block;
+      color: whitesmoke;
+      font-size: 30px;
+      align-self: center;
+    }
+
+    #navMain{
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    
+    .navMiddle{
+      display: none;
+    }
+  
+    .navRight{
+      display: none;
+    }
+  
+}
+
